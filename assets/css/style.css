@@ -1,0 +1,221 @@
+
+/* background images */
+.mortal,
+.fortress,
+.goro,
+.night,
+.desert {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.mortal {
+    background-image: url("../images/background-image.jpg");
+}
+.fortress {
+    background-image: url("../images/1.png");
+}
+.goro {
+    background-image: url("../images/2.jpg");
+}
+
+.night {
+	background-image: url("../images/3.png");
+}
+
+.desert {
+	background-image: url("../images/4.jpg");
+}
+
+
+/* navbar */
+/*the !important rule overrides that particular property*/
+
+/*mortal combat logo normal height*/
+.navbar-brand img {
+	max-height: 40px;
+	padding-bottom: 20px;
+}
+/*create color for navbar*/
+.navbar-default {
+	background-color: #2F1D1D !important;
+    border-color: #2F1D1D !important;
+}
+/*battle location color*/
+.navbar-default .navbar-nav>li>a {
+    color: #9A7E00 !important;
+
+}
+/*create style when you hover for dropdown menu*/
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: #2F1D1D  !important;
+    color: #9A7E00 !important;
+}
+/* create heading Mortal combat rpg*/
+h1 {
+ 	color: #9A7E00!important;
+ 	font-size: 30px !important;
+
+}
+/*all things over background*/
+.overlay {
+    height: 100%;
+}
+
+img {
+	width: 200px;
+	height: 200px;
+}
+
+.selection div img:hover {
+	border: 2px solid #9A7E00;
+}
+
+h2, h3, p {
+	color: orange;
+	font-weight: bold;
+	line-height: 30px;
+
+}
+
+.tint {
+	background-color: red;
+	display: inline-block;
+}
+
+.tint img {
+	opacity: .8;
+}
+
+.ally,
+.enemy,
+.vs h3 {
+	display: none;
+}
+
+.vs {
+	font-size: 20px;
+	margin-top: 190px;
+}
+
+.progress {
+	position: relative;
+}
+
+.progress span {
+	position: absolute;
+	display: block;
+	width: 100%;
+	color: black;
+	font-size: 15px;
+}
+/*don't see our buttons*/
+.action button {
+	display: none;
+}
+
+.ally .playing img {
+	border: 2px solid green;
+}
+
+.enemy .playing img {
+	border: 2px solid red;
+}
+.attack,
+.reset {
+	background-color: #9A7E00 !important;
+	margin-right: 300px;
+}
+
+.help-body {
+	background-color: #503230; 
+    background-size: cover;
+}
+.modal-header,
+.modal-footer {
+	padding-bottom: 0px;
+	padding-top: 0px;
+	background-color: #2F1D1D;
+	color: #9A7E00;
+	border-style: none;
+}
+.modal-title {
+	font-size: 30px;
+}
+.btn-lg {
+	background: #2F1D1D;
+}
+
+.help {
+	color: #9A7E00;
+	line-height: 20px;
+}
+
+/*locate our rules*/
+#help {
+	/*the cursor is a pointer and indicates a link*/
+	cursor: pointer;
+	color: #9A7E00 !important;
+	font-size: 22px;
+	background-color: #2F1D1D;
+}
+/*battle locations size*/
+.dropdown-toggle {
+	font-size: 22px;
+	color: #9A7E00 !important;
+}
+
+
+ /*need for list in how to play part*/
+li {
+	list-style-type: circle;
+	margin-left: 40px;
+}
+.square {
+	list-style-type: square !important;
+	margin-left: 60px;
+}
+.decimal {
+	list-style-type: decimal !important;
+	margin-left: 20px;
+}
+/*need for list in navbar dropdown menu*/
+.down {
+	list-style-type: none;
+	margin-left:0px;
+}
+/*locate message about attack more fancy*/
+p {
+	margin-top: 150px;
+}
+/*health bars - orange*/
+.progress-bar {
+	background-color: orange;
+}
+/*locate hp points on health bar*/
+.progress span {
+	margin-top: 2px;
+}
+
+
+
+/*don't see audio file*/
+audio {
+    display: none;
+}
+
+.glyphicon-play,
+.glyphicon-stop,
+.footer {
+	color: #9A7E00 !important;
+
+}
+
+
+
+
+
+
+

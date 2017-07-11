@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Document responsive across devices. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Document's character set. -->
+    <meta charset="UTF-8">
+    <!--Add favicon-->
+    <link rel="shortcut icon" type="image/png" href="assets/images/MC-favicon.png">
+    <title>Mortal Kombat RPG</title>
+    <!-- add link bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- add link css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- add link to jquery -->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- should be here for help button working correctly -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="mortal">
+<!-- autoplay when page start, loop for repeat music -->
+<audio loop id="music" src="assets/music/sound.mp3"></audio>
+<audio id="hit" src="assets/music/hit.mp3"></audio>
+<audio id="blue" src="assets/music/subzero.mp3"></audio>
+<audio id="yellow" src="assets/music/scorpion.mp3"></audio>
+<audio id="finish" src="assets/music/Finish.mp3"></audio>
+<audio id="victory" src="assets/music/victory.mp3"></audio>
+<audio id="haha" src="assets/music/haha.mp3"></audio>
+<audio id="lao" src="assets/music/lao.mp3"></audio>
+<audio id="smoke" src="assets/music/smoke.mp3"></audio>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default" role="navigation">
+    	<div class="navbar-container">
+      		<div class="container-fluid">
+        	<!-- Brand and toggle get grouped for better mobile display -->
+        	<div class="navbar-header">
+          		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            		<span class="sr-only">Toggle navigation</span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          		</button>
+          		<a class="navbar-brand" href="#" id="mortal"> <img alt="Mortal Logo" src="assets/images/mortal-logo.png"></a>
+<<<<<<< HEAD
+          		<h1 class="navbar-brand">Mortal Combat RPG</h1>
+				
+        		
+        	</div> <!-- end of navbar-header -->
+        	<!-- Collect the nav links, forms, and other content for toggling -->
+        	<div class="collapse navbar-collapse navbar-ex1-collapse">
+          		<ul class="nav navbar-nav navbar-right">
+          			<div class="nav-item  nav-link">
+          				<a  href="#" id="help">Rules</a>
+
+          				<!-- How to play Modal -->
+=======
+          		<h1>Mortal Kombat RPG</h1>
+          		<a href="#" id="play" class="pull-left">
+          			<span class="glyphicon glyphicon-play"></span>
+        		</a>
+          		<a href="#" id="stop" class="pull-left">
+          			<span class="glyphicon glyphicon-stop"></span>
+        		</a>
+				<div id="help"">Rules</div>
+        		<!-- How to play Modal -->
+>>>>>>> 4526c3006a0f7b29f5d26b618bf533752d9094ea
+        		<div id="helpModal" class="modal fade" role="dialog">
+            		<div class="modal-dialog modal-lg">
+                		<!-- Modal content-->
+                		<div class="modal-content">
+                    		<div class="modal-header">
+                        		<h4 class="modal-title help-title text-center">Rules: How to play</h4>
+                    		</div>
+                    	<div class="modal-body help-body">
+                        	<div class="help">
+                            	<ol>
+                            	<li class="decimal">Here's how the app works:</li>
+                            		<ul>
+										<li>When the game starts, the player will choose a character by clicking on the fighter's picture. The player will fight as that character for the rest of the game.</li>
+										<li>The player must then defeat all of the remaining fighters. Enemies should be moved to a different area of the screen.</li>
+										<li>The player chooses an opponent by clicking on an enemy's picture.</li>
+										<li>Once the player selects an opponent, that enemy is moved to a <code>defender area</code>.</li>
+										<li>The player will now be able to click the <code>attack</code> button.</li>
+										<ul>
+											<li class="square">Whenever the player clicks <code>attack</code>, their character damages the defender. The opponent will lose <code>HP</code> (health points). These points are displayed at the bottom of the defender's picture.</li>
+											<li class="square">The opponent character will instantly counter the attack. When that happens, the player's character will lose some of their <code>HP</code>. These points are shown at the bottom of the player character's picture.</li>
+										</ul>
+									</ul>
+								<li class="decimal">The player will keep hitting the attack button in an effort to defeat their opponent.</li>
+									<ul>
+										<li>When the defender's <code>HP</code> is reduced to zero or below, remove the enemy from the <code>defender area</code>. The player character can now choose a new opponent.</li>
+									</ul>
+								<li class="decimal">The player wins the game by defeating all enemy characters. The player loses the game the game if their character's <code>HP</code> falls to zero or below.</li>
+								<li class="decimal">Each character in the game has 3 attributes: <code>Health Points</code>, <code>Attack Power</code> and <code>Counter Attack Power</code>.</li>
+								<li class="decimal">Each time the player attacks, their character's <code>Attack Power</code> increases by its base <code>Attack Power</code>.</li>
+								<li class="decimal">The enemy character only has <code>Counter Attack Power</code>.</li>
+									<ul>
+										<li>Unlike the player's <code>Attack Points</code>, <code>Counter Attack Power</code> never changes.</li>
+									</ul>
+								<li class="decimal">The <code>Health Points</code>, <code>Attack Power</code> and <code>Counter Attack Power</code> of each character must differ.</li>
+								<li class="decimal">No characters in the game can heal or recover <code>Health Points</code>.</li>
+									<ul>
+										<li>A winning player must pick their characters wisely by first fighting an enemy with low <code>Counter Attack Power</code>. This will allow them to grind <code>Attack Power</code> and to take on enemies before they lose all of their <code>Health Points</code>. Healing options would mess with this dynamic.</li>
+									</ul>
+								<li class="decimal">Your players should be able to win and lose the game no matter what character they choose. The challenge should come from picking the right enemies, not choosing the strongest player.</li>
+								</ol>
+                        	</div> <!-- end of help div -->
+                    	</div> <!-- end of modal body -->
+                    	<div class="modal-footer">
+                        	<div class="modal-btn-group">
+                            	<button type="button" data-dismiss="modal" class="btn btn-lg Close">Close</button>
+                     		</div>
+                    	</div> <!-- end of modal footer -->
+                		</div> <!-- end of modal content -->
+            		</div> <!-- end of modal dialog -->
+       			</div> <!-- end of help modal -->
+        				<a  href="#" id="play"><span class="glyphicon glyphicon-play"></span></a>
+          				<a  href="#" id="stop"><span class="glyphicon glyphicon-stop"></span></a>
+          			</div>
+            		<ul class="dropdown">
+                  		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Battle Location <span class="caret"></span></a>
+                  			<ul class="dropdown-menu">
+                    			<li class="down"><a href="#" id="fortress">Quan Chi's Fortress</a></li>
+                    			<li class="down"><a href="#" id="goro">Goro's Throne Room</a></li>
+                    			<li class="down"><a href="#" id="night">The Pit Night</a></li>
+                    			<li class="down"><a href="#" id="desert">Jade's Desert</a></li>
+                  			</ul>
+                	</ul>
+          		</ul>
+        	</div><!-- end of navbar-collapse -->
+      		</div> <!-- end of container-fluid -->
+    	</div>  <!-- end of navbar container -->
+  	</nav>
+	<div class="overlay">
+		<div class="container">
+			<!-- Row of characters to select from (your character and enemies) -->
+			<div class="row selection text-center">
+				<!-- Subzero -->
+				<div class="col-lg-3 col-md-3 person">
+					<div id="Subzero" data-clickable="true">
+						<span class=""><img src="assets/images/Subzero.png"></span>
+						<h3>Subzero</h3>
+					</div> <!-- end of Subzero -->
+				</div> <!-- end of col with Subzero -->
+
+				<!-- Scorpion -->
+				<div class="col-lg-3 col-md-3 person">
+					<div id="Scorpion" data-clickable="true">
+						<span><img src="assets/images/Scorpion.png"></span>
+						<h3>Scorpion</h3>
+					</div> <!-- end of Scorpion -->
+				</div> <!-- end of col with Scorpion -->
+
+				<!-- Raiden -->
+				<div class="col-lg-3 col-md-3 person">
+					<div id="KungLao" data-clickable="true">
+						<span><img src="assets/images/KungLao.png"></span>
+						<h3>Kung Lao</h3>
+					</div> <!-- end of Raiden -->
+				</div> <!-- end of col with Raiden -->
+
+				<!-- Shao Kahn -->
+				<div class="col-lg-3 col-md-3 person">
+					<div id="Smoke" data-clickable="true">
+						<span><img src="assets/images/Smoke.png"></span>
+						<h3>Smoke</h3>
+					</div> <!-- end of Shao Kahn -->
+				</div> <!-- end of col with Shao Kahn -->
+			</div> <!-- end of selection row -->
+			<!-- Battlefield where your character and one enemy will fight -->
+			<div class="row battlefield text-center">
+			
+				<!-- Ally health bar and image -->
+				<div class="col-lg-4 col-md-4 ally">
+					<h2>YOU</h2>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="" style="">
+						<span></span>
+						</div>
+					</div>
+				</div> <!-- end of ally health and image -->
+
+				<div class="col-lg-1 col-md-1 vs">
+					<h3>VS</h3>
+				</div>
+
+				<!-- enemy health bar and image -->
+				<div class="col-lg-4 col-md-4 enemy">
+					<h2>ENEMY</h2>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="" style="">
+						</div>
+						<span></span>
+					</div>
+				</div> <!-- end of enemy health bar and image -->
+				<!-- message attack -->
+				<div class="col-lg-3 col-md-3 message">
+					<!-- here will be our attack text -->
+					<p></p> 
+				</div> <!-- end of message attack div -->
+			</div> <!-- end of battelfield row -->
+
+			<!-- Buttons to attack and reset game -->
+			<!-- Displays results and damage dealt to each character after each attack -->
+			<div class="row action text-center">
+				<button class='btn btn-default btn-lg attack'>Attack</button>
+				<button class='btn btn-default btn-lg reset'>Restart</button>		
+			</div>
+
+		</div> <!-- end of container -->
+	</div> <!-- end of overlay -->
+	<div class="navbar-fixed-bottom">
+    	<p class="footer text-center">@ Copyright 2017 Artem Tregubchak</p>
+    </div>
+	
+
+<!-- add link js -->
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
